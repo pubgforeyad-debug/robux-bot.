@@ -121,4 +121,21 @@ client.on("messageCreate", async (message) => {
       return message.reply("❌ هذا الأمر للإدارة فقط.");
 
     const user = message.mentions.users.first();
-    const amount = parseInt(args[
+    const amount = parseInt(args[1]);
+
+if (!user || isNaN(amount) || amount < 0)
+  return message.reply("استعمل: +set @user 100");
+
+await setBalance(user.id, amount);
+
+const embed = new EmbedBuilder()
+  .setColor("Yellow")
+  .setTitle("✏️ تم التعديل")
+  .setDescription(`${user} أصبح رصيده **${amount}** روبكس`);
+
+return message.reply({ embeds: [embed] });
+}
+
+});
+
+client.login(TOKEN);
