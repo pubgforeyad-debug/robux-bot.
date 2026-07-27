@@ -1,5 +1,5 @@
 {
-  "name": "robux-bot.",
+  "name": "robux-bot",
   "version": "1.0.0",
   "description": "Robux Bot",
   "main": "index.js",
@@ -7,6 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.21.0"
+    "discord.js": "^14.21.0",
+    "sqlite3": "^5.1.7"
   }
 }
