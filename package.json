@@ -1,7 +1,7 @@
 {
   "name": "robux-bot",
   "version": "1.0.0",
-  "description": "Discord Robux Bot",
+  "description": "Discord Robux Bot with Supabase",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
